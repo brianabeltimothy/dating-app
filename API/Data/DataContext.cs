@@ -5,10 +5,9 @@ namespace API.Data;
 
 public class DataContext : DbContext
 {
-    public DataContext(DbContextOptions options) : base(options)
-    {
-        
-    }
+     // configure database connection
+    public DataContext(DbContextOptions options) : base(options){ }
 
-    public DbSet<AppUser> Users { get; set; }
+    // entity (table) in the database
+    public DbSet<AppUser> Users { get; set; } 
 }
